@@ -74,8 +74,8 @@ const createChatCompletion = async (
 	proxy?: string
 ) => {
 	const { response, data } = await httpsPost(
-		'api.openai.com',
-		'/v1/chat/completions',
+		'models.inference.ai.azure.com',
+		'/chat/completions',
 		{
 			Authorization: `Bearer ${apiKey}`,
 		},
@@ -84,6 +84,7 @@ const createChatCompletion = async (
 		proxy
 	);
 
+	
 	if (
 		!response.statusCode ||
 		response.statusCode < 200 ||
