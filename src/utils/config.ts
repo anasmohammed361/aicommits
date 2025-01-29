@@ -88,7 +88,7 @@ const configParsers = {
 	},
 	timeout(timeout?: string) {
 		if (!timeout) {
-			return 10_000;
+			return 30_000;
 		}
 
 		parseAssert('timeout', /^\d+$/.test(timeout), 'Must be an integer');
